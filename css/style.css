@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+#navbar {
+  background-color: rgb(148, 112, 149);
+  width: 100%;
+  display: flex;
+}
+#navbar .logo {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+#navbar ul {
+  display: flex;
+  flex-direction: end;
+  margin-left: 100px;
+}
+#navbar ul a {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+body {
+  background-color: rgb(254, 204, 248);
+}
+body .leyenda {
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-size: 400px;
+  text-align: center;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */
