@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+#carouselExampleAutoplaying .carousel-inner {
+  height: 60vh;
+}
+#carouselExampleAutoplaying .carousel-inner img {
+  object-fit: cover;
+}
+
 #navbar {
   background-color: rgb(148, 112, 149);
   width: 100%;
