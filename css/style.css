@@ -1,18 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-#carouselExampleAutoplaying .carousel-inner {
-  height: 60vh;
-}
-#carouselExampleAutoplaying .carousel-inner img {
-  object-fit: cover;
-}
-
 #navbar {
   background-color: rgb(148, 112, 149);
   width: 100%;
   display: flex;
+  position: static;
+  top: 0;
 }
-#navbar .logo {
-  margin-left: 40px;
+#navbar #logo {
+  width: 300px;
+  margin-left: 100px;
   margin-right: 40px;
 }
 #navbar ul {
@@ -27,6 +23,9 @@
   font-size: 20px;
   font-weight: 500;
 }
+#navbar svg {
+  margin-right: 150px;
+}
 
 body {
   background-color: rgb(254, 204, 248);
@@ -40,6 +39,170 @@ body .leyenda {
   margin-left: 60px;
   margin-right: 60px;
   padding: 60px;
+}
+
+#carouselExampleAutoplaying .carousel-inner {
+  height: 70vh;
+}
+#carouselExampleAutoplaying .carousel-inner img {
+  object-fit: cover;
+}
+
+#tejiendo {
+  margin: 20px;
+  padding: 20px;
+}
+#tejiendo h2 {
+  text-align: center;
+  color: rgb(148, 112, 149);
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+#tejiendo .nosotros {
+  display: flex;
+  flex-direction: row;
+}
+#tejiendo .nosotros p {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+  margin: 50px;
+}
+#tejiendo .nosotros img {
+  width: 30%;
+  margin: 50px;
+  border-radius: 50px;
+}
+
+#seccionMantas {
+  background-color: rgb(148, 112, 149);
+}
+#seccionMantas h2 {
+  text-align: center;
+  color: rgb(254, 204, 248);
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-family: "Dancing Script", cursive;
+}
+#seccionMantas .mantitas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+#seccionMantas .mantitas .card {
+  background-color: rgb(254, 204, 248);
+}
+#seccionMantas .mantitas .card p {
+  color: rgb(148, 112, 149);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+#seccionMantas #calculadora #formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+#seccionMantas #calculadora #formulario .valores {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 50%;
+}
+#seccionMantas #calculadora #formulario .valores label {
+  color: rgba(93, 220, 234, 0.838);
+  font-size: 20px;
+  font-weight: 500;
+}
+#seccionMantas #calculadora #formulario select {
+  margin: auto;
+  width: 50%;
+  color: rgba(93, 220, 234, 0.838);
+  font-size: 20px;
+  font-weight: 500;
+}
+#seccionMantas #calculadora #formulario .btn-calcular {
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(93, 220, 234, 0.838);
+  border-color: white;
+  color: white;
+  padding: 10px;
+}
+
+#accesorios {
+  margin: 30px;
+  padding: 50px;
+}
+#accesorios h2 {
+  text-align: center;
+  color: rgb(148, 112, 149);
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+#accesorios .productos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+#accesorios .productos .card {
+  margin: 30px;
+  text-align: center;
+  background-color: rgb(148, 112, 149);
+}
+#accesorios .productos .card p {
+  color: white;
+}
+#accesorios .productos .card .card-title {
+  color: rgba(93, 220, 234, 0.838);
+}
+#accesorios .productos .card .btn {
+  background-color: rgba(93, 220, 234, 0.838);
+  font-size: 20px;
+  font-weight: 500;
+  border-color: white;
+}
+
+#cuidados {
+  background-image: url(../Imagenes/bg.jpg);
+  background-attachment: fixed;
+  height: 70vh;
+  padding: 50px;
+  text-align: center;
+}
+#cuidados h2 {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+#cuidados p {
+  font-size: 25px;
+  color: white;
+  font-weight: 400;
+}
+
+footer {
+  background-color: rgb(148, 112, 149);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(254, 204, 248);
+  font-size: 20px;
+}
+footer .redes {
+  padding: 20px;
+}
+footer .redes svg {
+  margin: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

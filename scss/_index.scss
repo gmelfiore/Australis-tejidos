@@ -1,8 +1,209 @@
+#navbar{
+    background-color: $maincolor;
+    width: 100%;
+    display: flex;
+    position: static;
+    top: 0;
+    #logo{
+        width: 300px;
+        margin-left: 100px;
+        margin-right: 40px;
+        }
+    ul{
+        display: flex;
+        flex-direction: end;
+        margin-left: 100px;
+        a{
+        margin-left: 20px;
+        margin-right: 20px;
+        color: $baseColor;
+        font-size: 20px;
+        font-weight: 500;
+        }
+    }
+    svg{
+        margin-right: 150px;
+    }
+}
+
+
+body{
+    background-color: $secondaryColor;
+    .leyenda{
+        color: $baseColor;
+        font-family:$specialFont;
+        font-size: 400px;
+        text-align: center;
+        text-shadow: 0 0 10px rgb(0, 0, 0);
+        margin-left: 60px;
+        margin-right: 60px;
+        padding: 60px;
+        
+    }
+}
+
+
 #carouselExampleAutoplaying{
     .carousel-inner{
-        height: 60vh;
+        height: 70vh;
         img{
             object-fit: cover;
+        }
+    }
+}
+#tejiendo{
+    margin: 20px;
+    padding: 20px;
+    h2{
+        text-align: center;
+        color:$maincolor;
+        margin-bottom: 30px; 
+        font-size: 40px; 
+    }
+    .nosotros{
+        display: flex;
+        flex-direction: row;
+        p{
+            font-size: 25px;
+            font-weight: 500;
+            color:$baseColor;
+            margin: 50px;
+        }
+        img{
+            width: 30%;
+            margin: 50px;
+            border-radius: 50px;
+        }
+    }
+}
+#seccionMantas{
+    background-color: $maincolor;
+    h2{
+        text-align: center;
+        color:$secondaryColor;
+        margin-bottom: 30px; 
+        font-size: 50px; 
+        font-family: $specialFont;  
+    }
+    .mantitas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        .card{
+            background-color: $secondaryColor;
+            p{
+                color: $maincolor;
+                font-size: 18px;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+    }
+    #calculadora{
+        #formulario{
+            display: flex;
+            flex-direction: column;
+            padding: 50px;
+            .valores{
+                display: flex;
+                flex-direction: row;
+                margin: auto;
+                width: 50%;
+                label{
+                    color: $keyColor;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+            select{
+                margin: auto;
+                width: 50%;
+                color: $keyColor;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .btn-calcular{
+                margin: auto;
+                margin-top: 20px;
+                border-radius: 10px;
+                font-size: 20px;
+                font-weight: 500;
+                background-color: $keyColor;
+                border-color: $baseColor;
+                color: $baseColor;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+#accesorios{
+    margin: 30px;
+    padding: 50px;
+        h2{text-align: center;
+        color:$maincolor;
+        margin-bottom: 30px; 
+        font-size: 40px; 
+        }
+        .productos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 30px;
+            .card{
+                margin: 30px;
+                text-align: center;
+                background-color: $maincolor;
+                p{
+                    color: $baseColor;
+                }
+                .card-title{
+                    color: $keyColor;
+                }
+                .btn{
+                    background-color: $keyColor;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border-color: $baseColor;
+                }
+            }
+        }
+}
+
+#cuidados{
+    background-image: url(../Imagenes/bg.jpg);
+    background-attachment: fixed;
+    height: 70vh;
+    padding: 50px;
+    text-align: center;
+    h2{
+        color: $baseColor;
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 25px;
+        color: $baseColor;
+        font-weight: 400;
+    }
+}
+
+footer{
+    background-color: $maincolor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $secondaryColor;
+    font-size: 20px;
+    .redes{
+        padding: 20px;
+        svg{
+        margin: 10px ;
         }
     }
 }

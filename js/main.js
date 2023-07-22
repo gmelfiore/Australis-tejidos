@@ -24,60 +24,60 @@
 // saludo = prompt ('Bienvenido a Australis Tejidos. Ingresa tu nombre para continuar o ESC para salir')
 // }
 
-function Stock (nombre, cantidad) {
-    this.nombre = nombre
-    this.cantidad = cantidad
-  }
+// function Stock (nombre, cantidad) {
+//     this.nombre = nombre
+//     this.cantidad = cantidad
+//   }
   
-  const productos = []
+//   const productos = []
   
-  const cargarProducto = () => {
-    const nuevoProducto = new Stock(
-      prompt('Ingrese el nombre del producto'),
-      prompt('Ingrese el stock del producto')
-    )
-    productos.push(nuevoProducto)
-  }
+//   const cargarProducto = () => {
+//     const nuevoProducto = new Stock(
+//       prompt('Ingrese el nombre del producto'),
+//       prompt('Ingrese el stock del producto')
+//     )
+//     productos.push(nuevoProducto)
+//   }
   
-  for (let i = 0; i < 5; i++) {
-    cargarProducto()
-  }
-  
-  
-  function iterar  () {
-    let opciones = prompt ('¿Qué desea hacer con los productos ingresados? Ingrese el número correspondiente: 1- Visualizar los productos que tienen un stock de 5 o menos.  2-  Ordenarlos de menor stock a mayor stock. 3- Ordenarlos alfabéticamente.')
-    switch (opciones){
-      case '1': 
-      const pocoStock= productos.filter ( producto => producto.cantidad <= 5)
-      console.log (pocoStock);
-      break;
-  
-      case '2': 
-      const masOmenos= productos.sort (function (a, b) {
-        if(a.cantidad < b.cantidad) { return -1; }
-        if(a.cantidad > b.cantidad) { return 1; }
-        return 0;
-        })
-      console.log (masOmenos);
-      break;
-  
-      case '3':
-      const abc = productos.sort (function (a, b) {
-      if(a.nombre < b.nombre) { return -1; }
-      if(a.nombre > b.nombre) { return 1; }
-      return 0;
-      })
-      console.log (abc)
-      break;
+//   for (let i = 0; i < 5; i++) {
+//     cargarProducto()
+//   }
   
   
-      default: 
-      console.log (productos);
-      break;
-    }
-  }
+//   function iterar  () {
+//     let opciones = prompt ('¿Qué desea hacer con los productos ingresados? Ingrese el número correspondiente: 1- Visualizar los productos que tienen un stock de 5 o menos.  2-  Ordenarlos de menor stock a mayor stock. 3- Ordenarlos alfabéticamente.')
+//     switch (opciones){
+//       case '1': 
+//       const pocoStock= productos.filter ( producto => producto.cantidad <= 5)
+//       console.log (pocoStock);
+//       break;
   
-  let resultado= iterar ()
+//       case '2': 
+//       const masOmenos= productos.sort (function (a, b) {
+//         if(a.cantidad < b.cantidad) { return -1; }
+//         if(a.cantidad > b.cantidad) { return 1; }
+//         return 0;
+//         })
+//       console.log (masOmenos);
+//       break;
   
-  console.log(resultado)
+//       case '3':
+//       const abc = productos.sort (function (a, b) {
+//       if(a.nombre < b.nombre) { return -1; }
+//       if(a.nombre > b.nombre) { return 1; }
+//       return 0;
+//       })
+//       console.log (abc)
+//       break;
+  
+  
+//       default: 
+//       console.log (productos);
+//       break;
+//     }
+//   }
+  
+//   let resultado= iterar ()
+  
+//   console.log(resultado)
   
