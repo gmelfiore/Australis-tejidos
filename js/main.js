@@ -33,8 +33,8 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
         if (respuesta.isConfirmed) {
             carrito.push(new Producto ("Mi mantita ideal", (r)))
             console.log (carrito)
+            localStorage.setItem("carrito", JSON.stringify(carrito))
         }
-        localStorage.setItem("carrito", JSON.stringify(carrito))
         // console.log (JSON.parse(localStorage.getItem (carrito)))
       })
     })
@@ -61,7 +61,7 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
     // mostrarCarrito ()
     
     //INTENTO 2
-    
+
     // for (const producto of carrito) {
     //     let compra = document.getElementById("productosAgregados");
     //     compra.innerHTML = `<h2>${producto.nombre}</h2><p>Precio: $${producto.precio}</p>`;
