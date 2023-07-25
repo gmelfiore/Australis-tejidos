@@ -123,7 +123,7 @@ body .leyenda {
   font-size: 20px;
   font-weight: 500;
 }
-#seccionMantas #calculadora #formulario .btn-calcular {
+#seccionMantas #calculadora #formulario #btn-calcular {
   margin: auto;
   margin-top: 20px;
   border-radius: 10px;

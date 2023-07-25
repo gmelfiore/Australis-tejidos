@@ -1,83 +1,69 @@
-// let saludo = prompt ('Bienvenido a Australis Tejidos. Ingresa tu nombre para continuar o ESC para salir')
-// function calcularPrecio (){
-//     let ancho = parseInt (prompt ('Indique el ancho que desea en centímetros'))
-//     let largo = parseInt (prompt ('Indique el largo que desea en centímetros'))
-//     let color = prompt ('Indique el número que corresponde al tipo de lana que prefiere: 1- Lana natural 2- Lana teñida')
-//    let medida = ancho*largo
-//    switch (color){
-//     case '1':
-//         let lanaNatural = 8500
-//         alert ('El precio de su manta es $' + (medida*lanaNatural/10000));
-//         break;
-//     case '2':
-//         let lanaTeñida = 10700
-//         alert ('El precio de su manta es $' + (medida*lanaTeñida/10000))
-//         break;
-//         default:
-//            alert('Opción no valida. Intente de nuevo');
-    //         calcularPrecio()
-    //         break;
-//    }
-// }
-// while (saludo != 'ESC'){
-// calcularPrecio ()
-// saludo = prompt ('Bienvenido a Australis Tejidos. Ingresa tu nombre para continuar o ESC para salir')
-// }
+let carrito = [];
 
-// function Stock (nombre, cantidad) {
-//     this.nombre = nombre
-//     this.cantidad = cantidad
-//   }
+class Producto{
+    constructor (nombre, precio){
+        this.nombre= nombre;
+        this.precio= parseInt(precio);
+    }
+}
+
+naturalPrecio = 8500
+fantasiaPrecio = 10700
+document.querySelector ("#btn-calcular").addEventListener ("click", () => {
+    let ancho = parseInt(document.getElementById ("formGroupExampleInput").value);
+    let largo = parseInt(document.getElementById ("formGroupExampleInput2").value);
+    let lana = document.getElementById ("lana").value;
+    let medida = ancho * largo;
+    let r;
+
+    if (lana == '1'){
+    r = medida*naturalPrecio/10000;
+    } else if (lana == '2'){
+        r = medida*fantasiaPrecio/10000
+    }
+    
+    Swal.fire ({
+        title: ('Tu mantita ideal cuesta $' + (r)),
+        text: '¿Querés agregarla al carrito?',
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: 'Comprar',
+        denyButtonText: 'Seguir mirando'
+        }).then((respuesta) => {
+        if (respuesta.isConfirmed) {
+            carrito.push(new Producto ("Mi mantita ideal", (r)))
+            console.log (carrito)
+        }
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+        // console.log (JSON.parse(localStorage.getItem (carrito)))
+      })
+    })
   
-//   const productos = []
-  
-//   const cargarProducto = () => {
-//     const nuevoProducto = new Stock(
-//       prompt('Ingrese el nombre del producto'),
-//       prompt('Ingrese el stock del producto')
-//     )
-//     productos.push(nuevoProducto)
-//   }
-  
-//   for (let i = 0; i < 5; i++) {
-//     cargarProducto()
-//   }
-  
-  
-//   function iterar  () {
-//     let opciones = prompt ('¿Qué desea hacer con los productos ingresados? Ingrese el número correspondiente: 1- Visualizar los productos que tienen un stock de 5 o menos.  2-  Ordenarlos de menor stock a mayor stock. 3- Ordenarlos alfabéticamente.')
-//     switch (opciones){
-//       case '1': 
-//       const pocoStock= productos.filter ( producto => producto.cantidad <= 5)
-//       console.log (pocoStock);
-//       break;
-  
-//       case '2': 
-//       const masOmenos= productos.sort (function (a, b) {
-//         if(a.cantidad < b.cantidad) { return -1; }
-//         if(a.cantidad > b.cantidad) { return 1; }
-//         return 0;
-//         })
-//       console.log (masOmenos);
-//       break;
-  
-//       case '3':
-//       const abc = productos.sort (function (a, b) {
-//       if(a.nombre < b.nombre) { return -1; }
-//       if(a.nombre > b.nombre) { return 1; }
-//       return 0;
-//       })
-//       console.log (abc)
-//       break;
-  
-  
-//       default: 
-//       console.log (productos);
-//       break;
-//     }
-//   }
-  
-//   let resultado= iterar ()
-  
-//   console.log(resultado)
-  
+    //INTENTOS DE MOSTRAR CARRITO EN EL HTML
+
+    //INTENTO 1
+
+    // const productosAgregados = document.getElementById ("productosAgregados");
+
+    // function mostrarCarrito {
+    // if (carrito.length != 0 ){
+    // carrito.forEach ((product) =>{
+    //     let content = document.createElement ("div");
+    //     content.className = "card";
+    //     content.innerHTML = `
+    //     <h2>${carrito.nombre}</h2>
+    //     <p>$ ${carrito.precio}</p>
+    //     `;
+    //     productosAgregados.append(content);
+    // });
+    // }}
+
+    // mostrarCarrito ()
+    
+    //INTENTO 2
+    
+    // for (const producto of carrito) {
+    //     let compra = document.getElementById("productosAgregados");
+    //     compra.innerHTML = `<h2>${producto.nombre}</h2><p>Precio: $${producto.precio}</p>`;
+    // }
+
