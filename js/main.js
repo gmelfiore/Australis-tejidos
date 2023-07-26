@@ -35,9 +35,11 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
             console.log (carrito)
             localStorage.setItem("carrito", JSON.stringify(carrito))
         }
-        // console.log (JSON.parse(localStorage.getItem (carrito)))
       })
+      let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     })
+
+    
 
    
   
