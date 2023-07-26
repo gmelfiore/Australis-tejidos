@@ -38,6 +38,8 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
         // console.log (JSON.parse(localStorage.getItem (carrito)))
       })
     })
+
+    let mostrarCarrito = JSON.parse (localStorage.getItem (carrito));
   
     //INTENTOS DE MOSTRAR CARRITO EN EL HTML
 
