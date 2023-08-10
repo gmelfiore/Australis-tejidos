@@ -39,8 +39,56 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
       let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     })
 
-    
+  let accesorios = [
+    {
+    id: 'quieroCaramelo',
+    nombre:'Almohadón Caramelo',
+    precio: 5000,
+  },
+    {
+        id: 'quieroAlmohadonRedondo',
+        nombre: 'Almohadón Redondo',
+        precio: 3500,
+    },
+    {
+        id:'quieroAlfombra',
+        nombre: 'Alfombra redonda',
+        precio: 10000,
+    },
+    {
+        id: 'quieroCuellito',
+        nombre: 'Cuellito',
+        precio: 3500,
+    },
+    {
+        id:'quieroGuantes',
+        nombre: 'Guantes manopla',
+        precio: 2500,
 
+    },
+    {
+        id: 'quieroPantuflas',
+        nombre: 'Pantuflas',
+        precio: 3500
+    },];
+
+    function comprarAccesorios (){
+        let botones = document.querySelectorAll (".btnAccesorios")
+        for (const boton of botones){
+            boton.onclick = (e) =>{
+                const accesorioSeleccionado = accesorios.find(accesorio => accesorio.id == e.target.id)
+                carrito.push(accesorioSeleccionado);
+                console.log (carrito)
+                localStorage.setItem("carrito", JSON.stringify(carrito))
+            }
+
+        }
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    }
+
+    comprarAccesorios ()
+
+    
    
   
     //INTENTOS DE MOSTRAR CARRITO EN EL HTML
