@@ -51,8 +51,11 @@ function mostrarCarrito () {
     } else {
         let vacio = document.createElement ('div');
         vacio.innerHTML = `
-        Tu carrito está vacío`;
+        <h1>Tu carrito está vacío</h1>`;
+        contenedor.append(vacio);
         }
+
+        
     }
 
     
@@ -65,17 +68,17 @@ function mostrarCarrito () {
         localStorage.setItem("carrito", JSON.stringify(carrito))
         mostrarCarrito ()
     }
-function vaciarCarrito (){
+
     let btnFinalizar = document.querySelector ("#btn-finalizar")
     btnFinalizar.addEventListener("click", () =>{
-        localStorage.removeItem (carrito);
+        carrito = [];
         localStorage.setItem("carrito", JSON.stringify(carrito))
         mostrarCarrito ()
-
-    })
-    }
-
-    vaciarCarrito()
+        })
+   
+        
+    
+    
 
     
    
