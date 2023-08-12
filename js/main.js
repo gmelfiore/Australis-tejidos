@@ -116,6 +116,19 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
 
     comprarAccesorios ()
 
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((users) => {
+        const saludo = document.getElementById ('saludo')
+        const user = users.find ((user) => user.id === 2);
+        console.log (user);
+        saludo.innerHTML= `
+        <h4 class="centrar-texto text-maincolor">¡Bienvenido ${user.name}, te estabamos esperando! </h4>
+        `;
+        setTimeout( () => {
+            saludo.style.display = "none";
+           }, 5000 );
+      })
     
    
   
