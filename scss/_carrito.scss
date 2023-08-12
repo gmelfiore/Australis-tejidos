@@ -1,0 +1,34 @@
+#btn-finalizar{
+    margin: 30px;
+}
+
+#total{
+    margin: 30px;
+}
+ 
+#card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#card-productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#carrito-vacio{
+    margin: 100px;
+}
+
+.toast-agregado{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.toast-compra{
+    font-size: 30px;
+    font-weight: 400;
+}

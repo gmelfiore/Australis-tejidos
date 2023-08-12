@@ -205,4 +205,94 @@ footer .redes svg {
   margin: 10px;
 }
 
+.bg-maincolor {
+  background-color: rgb(148, 112, 149);
+}
+
+.bg-secondarycolor {
+  background-color: rgb(254, 204, 248);
+}
+
+.bg-basecolor {
+  background-color: white;
+}
+
+.bg-keycolor {
+  background-color: rgba(93, 220, 234, 0.838);
+}
+
+.text-maincolor {
+  color: rgb(148, 112, 149);
+}
+
+.text-secondarycolor {
+  color: rgb(254, 204, 248);
+}
+
+.text-basecolor {
+  color: white;
+}
+
+.text-keycolor {
+  color: rgba(93, 220, 234, 0.838);
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.negrita {
+  font-weight: 500;
+}
+
+.letra-grande {
+  font-size: 30px;
+}
+
+.centrar-objeto {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-finalizar {
+  margin: 30px;
+}
+
+#total {
+  margin: 30px;
+}
+
+#card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-productos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#carrito-vacio {
+  margin: 100px;
+}
+
+.toast-agregado {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.toast-compra {
+  font-size: 30px;
+  font-weight: 400;
+}
+
 /*# sourceMappingURL=style.css.map */

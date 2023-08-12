@@ -1,9 +1,11 @@
 let carrito = [];
 
 class Producto{
-    constructor (nombre, precio){
+    constructor (nombre, precio, img, id){
         this.nombre= nombre;
         this.precio= parseInt(precio);
+        this.img= img;
+        this.id= id;
     }
 }
 
@@ -31,10 +33,20 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
         denyButtonText: 'Seguir mirando'
         }).then((respuesta) => {
         if (respuesta.isConfirmed) {
-            carrito.push(new Producto ("Mi mantita ideal", (r)))
+            carrito.push(new Producto ("Mi mantita ideal", (r), "../Imagenes/manta-blanca.jpg", "mantita"))
             console.log (carrito)
             localStorage.setItem("carrito", JSON.stringify(carrito))
-        }
+        };
+        Toastify ({
+            text: "¡Producto agregado al carrito!",
+            duration: 3000,
+            gravity: 'bottom',
+            position: 'right',
+            className: 'toast-agregado',
+            style: {
+                background: "rgba(93, 220, 234, 0.838)",
+              },
+        }).showToast();
       })
       let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     })
@@ -44,32 +56,38 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
     id: 'quieroCaramelo',
     nombre:'Almohadón Caramelo',
     precio: 5000,
+    img: "../Imagenes/almohadon-caramelo.jpg",
   },
     {
         id: 'quieroAlmohadonRedondo',
         nombre: 'Almohadón Redondo',
         precio: 3500,
+        img: "../Imagenes/almohadon-redondo.jpg",
     },
     {
         id:'quieroAlfombra',
         nombre: 'Alfombra redonda',
         precio: 10000,
+        img: "../Imagenes/alfombra.jpeg",
     },
     {
         id: 'quieroCuellito',
         nombre: 'Cuellito',
         precio: 3500,
+        img: "../Imagenes/cuellito.jpg",
     },
     {
         id:'quieroGuantes',
         nombre: 'Guantes manopla',
         precio: 2500,
+        img: "../Imagenes/guantes.jpg",
 
     },
     {
         id: 'quieroPantuflas',
         nombre: 'Pantuflas',
-        precio: 3500
+        precio: 3500,
+        img: "../Imagenes/pantuflas.jpg",
     },];
 
     function comprarAccesorios (){
@@ -80,6 +98,16 @@ document.querySelector ("#btn-calcular").addEventListener ("click", () => {
                 carrito.push(accesorioSeleccionado);
                 console.log (carrito)
                 localStorage.setItem("carrito", JSON.stringify(carrito))
+                Toastify ({
+                    text: "¡Producto agregado al carrito!",
+                    duration: 3000,
+                    gravity: 'bottom',
+                    position: 'right',
+                    className: 'toast-agregado',
+                    style: {
+                        background: "rgba(93, 220, 234, 0.838)",
+                      },
+                }).showToast();
             }
 
         }

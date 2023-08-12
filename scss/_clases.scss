@@ -33,3 +33,24 @@
 .centrar-texto{
     text-align: center;
 }
+
+.negrita{
+    font-weight: 500;
+}
+
+.letra-grande{
+    font-size: 30px;
+}
+
+
+.centrar-objeto{
+    display: flex;
+    justify-content: center;
+}
+
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
